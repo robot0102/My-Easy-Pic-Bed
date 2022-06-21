@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template, current_app
 from werkzeug.utils import secure_filename
