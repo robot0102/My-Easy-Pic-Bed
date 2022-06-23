@@ -14,7 +14,16 @@ from flask.cli import with_appcontext
 cf = gcf.get_config()
 
 allowed_extensions = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-upload_folder = os.path.join(os.getcwd(), 'pics')
+
+# For any platform
+# upload_folder = os.path.join(os.getcwd(), 'pics')
+
+# Access the shared folder on the VMware
+# For Unix
+upload_folder = os.path.join('/mnt/hgfs/picture_bed', 'pics')
+# For Windows
+# upload_folder = os.path.join('D:\\picture_bed', 'pics')
+
 print(upload_folder)
 app = Flask(__name__, instance_relative_config=True)
 
